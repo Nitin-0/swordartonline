@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet">
+    <title>Sword Art Online</title>
+</head>
+<body>
+    <div class="header-top__bg"></div>
+    <div class="header">
+        <div class="navbar">
+            <ul>
+               <li><a href="#Home" class="active">Home</a></li>
+                <li><a href="#character-card">Characters</a></li>
+                <li><a href="#movie">Movies</a></li>
+                <li><a href="#About Us">About Us</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="imagecontainer" id="Home">
+        <video style="object-fit: cover;" class="mv-bg" id="video" webkit-playsinline playsinline muted autoplay loop>
+            <source src="https://saovs-web-contents.s3.ap-northeast-1.amazonaws.com/movie/saovs_movie.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="container">
+            <div class="text">Sword Art Online</div>
+        </div>
+    </div>
+<!-- 
+    <div class="add-character-container" id="character-card">
+        <div class="cards-heading">
+            <h1>Characters</h1>
+        </div>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide character-card">
+                    <img src="Kirito.png" alt="Kirito">
+                    <h3>Kirito</h3>
+                    <p>The Black Swordsman</p>
+                </div>
+                <div class="swiper-slide character-card">
+                    <img src="Asuna.png" alt="Asuna">
+                    <h3>Asuna</h3>
+                    <p>The Flash</p>
+                </div>
+                <div class="swiper-slide character-card">
+                    <img src="Sinon-0.webp" alt="Sinon">
+                    <h3>Sinon</h3>
+                    <p>The Sniper</p>
+                </div>
+                <div class="swiper-slide character-card">
+                    <img src="Sinon-0.webp" alt="Sinon">
+                    <h3>Sinon</h3>
+                    <p>The Sniper</p>
+                </div>
+                <div class="swiper-slide character-card">
+                    <img src="Sinon-0.webp" alt="Sinon">
+                    <h3>Sinon</h3>
+                    <p>The Sniper</p>
+                </div>
+                <div class="swiper-slide character-card">
+                    <img src="Sinon-0.webp" alt="Sinon">
+                    <h3>Sinon</h3>
+                    <p>The Sniper</p>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+     -->
+<!-- Modal Structure -->
+    <div class="modal">
+        <div class="modal-bg"></div>
+        <div class="modal-yt modal-item">
+            <a href="#" class="modal-close"><img src="close.png" alt="Close"></a>
+            <iframe width="853" height="480" src=" " title="Sword Art Online - Opening 1 [4K 60FPS | Creditless | CC]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen id="yt"></iframe>
+
+        </div>
+    </div>
+
+
+     <section class="movie" id="movie">
+        <div class="movie-inner">
+            <h2 class="movie-head">
+                <img src="h2.png" width="455" alt="MOVIE">
+            </h2>
+            <div class="movie-list">
+                <div class="swiper-container movie-list__wrapper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide movie-list__item">
+                            <div class="movie-list__link" data-url="1oOBjyOKu2o">
+                                <img src="thumb_4.jpg" width="600" alt="Movie Thumbnail">
+                                <p class="movie-list__title">Sword Art Online Variant Showdown Original Opening Movie</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide movie-list__item">
+                            <div class="movie-list__link" data-url="1oOBjyOKu2o">
+                                <img src="thumb_1.jpg" width="600" alt="Movie Thumbnail">
+                                <p class="movie-list__title">The first trailer for SAOVS</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide movie-list__item">
+                            <div class="movie-list__link" data-url="1oOBjyOKu2o">
+                                <img src="thumb_4.jpg" width="600" width="600" alt="Movie Thumbnail">
+                                <p class="movie-list__title">The first trailer for SAOVS</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide movie-list__item">
+                            <div class="movie-list__link" data-url="1oOBjyOKu2o">
+                                <img src="thumb_1.jpg" width="600" alt="Movie Thumbnail">
+                                <p class="movie-list__title">The first trailer for SAOVS</p>
+                            </div>
+                        </div>
+                        <!-- Add more movie thumbnails as needed -->
+                    </div>
+                    <div class="swiper-button-prev movie-list__arrow">
+                        <img src="arrow.png" alt="Previous">
+                    </div>
+                    <div class="swiper-button-next movie-list__arrow">
+                        <img src="arrow.png" alt="Next">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            loop: true,
+        });
+    </script>
+    <script src="script.js"></script>
+    <footer>
+    </footer>
+    <p>Made By Nitin</p>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</body>
+</html>
